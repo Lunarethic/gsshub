@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    height: 100vh;
+}
+
+/*Wrapper that encompasses both sidebar and mainview*/
+.wrapper {
+    display: grid;
+    grid-template-areas:
+    "sheader mheader"
+    "sidebar mainview"
+    "sfooter mfooter";
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+    background-color: dodgerblue;
+}
+
+.wrapper aside.sidebar {
+    grid-area: sidebar;
+    background-color: rgb(107, 107, 126);
+}
+
+.wrapper main.mainview {
+    grid-area: mainview;
+    overflow-y: auto;
+    height: 100%;
+    background-color: #68abe9;
+}
+
+/*Sidebar CSS*/
+.sidebar{
+
+}
+
+.sidebar nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+}
+
+
+/*Mainview CSS*/
+.mainview {
+    overflow-y: auto;
+}
+
+.mainview nav {
+    position: sticky;
+    padding: 10px;
+    top: 0;
+    z-index:1000;
+    background-color: rgb(255, 255, 255);
+}
+
+
+/*Bulletin Board CSS*/
+.bulletin{
+}
+
+.tabs{
+    overflow: hidden;
+
+}
+
+.tabs button {
+  background-color: #e1e1e1;
+  float: left;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 10px 10px 0 0;
+  margin-right: 5px;
+  position: relative;
+  top: 1px;
+}
+
+.tabs button:hover {
+  background-color: #d1d1d1;
+}
+
+.tabs button.active {
+  background-color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.tab-content {
+  display: none;
+  padding: 20px;
+  border-top: none;
+  background-color: #fff;
+}
