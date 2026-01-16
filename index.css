@@ -17,6 +17,11 @@ body {
     grid-template-columns: 250px 1fr;
     grid-template-rows: auto 1fr auto;
     height: 100vh;
+    transition: grid-template-columns 0.3s ease-in-out;
+}
+
+.wrapper.collapsed {
+    grid-template-columns: 80px 1fr;
 }
 
 .wrapper aside.sidebar {
@@ -28,15 +33,10 @@ body {
     grid-area: mainview;
     overflow-y: auto;
     height: 100%;
-    background-color: #ffffff;
+    background-color: #F8F9FA;
 }
 
 /*Sidebar CSS*/
-.sidebar *{
-    overflow: hidden;
-    color: white;
-}
-
 .sidebar path{
     fill: white;
 }
@@ -48,6 +48,7 @@ body {
     padding: 10px;
     padding-left: 20px;
     padding-right: 20px;
+    margin-bottom: 10px;
     background-color: #0094B3;
 }
 
@@ -56,6 +57,7 @@ body {
   align-items: center;
   gap: 10px;
   padding: 20px;
+  padding-left: 30px;
 
   /* interaction base */
   transition:
@@ -65,7 +67,7 @@ body {
 
   position: relative;
   z-index: 0;
-
+  color: white;
 }
 
 .sidebar li:not(:last-child) {
@@ -81,9 +83,11 @@ body {
 .sidebar li:hover {
   background-color: rgba(255, 255, 255, 0.04);
   transform: scale(1.05);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 14px rgba(0, 0, 0, 0.25);
   z-index: 10;
   cursor: pointer;
+  border-bottom: none;
+  color: #5DB3D3;
 }
 
 .unselectable {
@@ -92,6 +96,18 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+.toggle-sidebar{
+  background-color: rgba(64, 66, 75,0);
+  padding: 7px;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-sidebar:hover{
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 /*Mainview CSS*/
@@ -107,6 +123,36 @@ body {
     background-color: #ffffff;
 }
 
+
+/*Carousel CSS*/
+@keyframes pulse-gradient {
+  0% {background-position: 0% 50%;}
+  20% {background-position: 80% 20%;}
+  40% {background-position: 20% 80%;}
+  60% {background-position: 100% 50%;}
+  80% {background-position: 40% 0%;}
+  100% {background-position: 0% 50%;}
+}
+
+.carousel-wrapper {
+  color: white;
+  width: 100%;
+  height: 1000px;
+  max-height: 40vh;
+  overflow:hidden;
+  background-color: #ffffff;
+  background: linear-gradient(45deg, #11abda, #0CC5FB, #6eccdf, #63bcce);
+  background-size: 200% 200%;
+  animation: pulse-gradient 95s ease-in-out infinite;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel{
+
+}
 
 /*Bulletin Board CSS*/
 
