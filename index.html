@@ -15,8 +15,8 @@
     <div class="wrapper">
         <aside class="sidebar" style="overflow-x: hidden;">
             <nav>
-            <button>
-            <svg class="nsdq-logo" width="100" height="39" viewBox="0 0 106 30" fill="black" xmlns="http://www.w3.org/2000/svg" focusable="false" aria-hidden="true">
+            <button id="company-logo" class="company-logo">
+            <svg width="100" height="39" viewBox="0 0 106 30" fill="black" xmlns="http://www.w3.org/2000/svg" focusable="false" aria-hidden="true">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M78.1281 22.8256C74.5111 22.8256 72.2639 20.7247 72.2639 17.3409C72.2639 13.8246 74.3374 11.6398 77.6759 11.6398L77.9581 11.6382C78.3755 11.6382 78.9524 11.6514 79.74 11.7517V7.50928H82.102V22.4441C82.102 22.4441 79.8589 22.8256 78.1281 22.8256ZM78.1076 13.5027C75.8219 13.5027 74.7106 14.7392 74.7106 17.2823C74.7106 19.5643 76.0503 20.9817 78.206 20.9817C78.6198 20.9817 79.0941 20.9559 79.74 20.8989V13.6537C79.0935 13.5508 78.5745 13.5027 78.1076 13.5027Z" fill="#404041"></path>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M45.8108 22.485L39.4365 11.3324L39.4349 22.485H37.214V8.36816H40.3225L46.6968 19.421L46.6941 8.36816H48.9435V22.485H45.8108Z" fill="#404041"></path>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M66.1111 22.7014C65.0383 22.7014 63.9186 22.5811 62.5857 22.3241L62.4441 22.2961V20.324L62.6552 20.3704C63.8286 20.6206 64.843 20.8369 65.8563 20.8369C66.677 20.8369 68.5858 20.706 68.5858 19.4975C68.5858 18.4827 67.2666 18.2289 66.2064 18.0257L66.1401 18.0125C65.9432 17.9735 65.7568 17.9365 65.5973 17.8964C64.0434 17.4916 62.3857 16.8847 62.3857 14.7965C62.3857 12.7605 63.9939 11.5927 66.7975 11.5927C68.1425 11.5927 69.1195 11.7383 69.9039 11.8555L70.2877 11.913V13.8244L70.0829 13.7891C69.1948 13.6249 68.1541 13.4566 67.1513 13.4566C66.04 13.4566 64.7161 13.6651 64.7161 14.6588C64.7161 15.482 65.7979 15.7179 67.0507 15.9908C68.8011 16.3728 70.9736 16.8483 70.9736 19.2426C70.9736 21.4406 69.2011 22.7014 66.1111 22.7014Z" fill="#404041"></path>
@@ -38,35 +38,54 @@
 
             </nav>    
             <div>
-            <ul class="unselectable" style="padding-left: 0;">
+            <ul class="sidebar-list" style="padding-left: 0;">
                 <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
-                    <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-gear-fill" viewBox="0 0 16 16">
+                        <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
                     </svg>
-                    Workflow and Scripts</li>
-                    <span></span>
+                    </span>
+                    <label>Workflow and Scripts</label>
+                </li>
+                
+                
                 <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
-                    <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783"/>
-                    </svg>
-                    Knowledge Base</li>
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                        <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783"/>
+                        </svg>
+                    </span>
+                    <label>Knowledge Base</label>
+                </li>
+
                 <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tools" viewBox="0 0 16 16">
-                    <path d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3q0-.405-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708M3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026z"/>
-                    </svg>
-                    GSS Tools</li>
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-tools" viewBox="0 0 16 16">
+                        <path d="M1 0 0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.27 3.27a.997.997 0 0 0 1.414 0l1.586-1.586a.997.997 0 0 0 0-1.414l-3.27-3.27a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3q0-.405-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814zm9.646 10.646a.5.5 0 0 1 .708 0l2.914 2.915a.5.5 0 0 1-.707.707l-2.915-2.914a.5.5 0 0 1 0-.708M3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026z"/>
+                        </svg>
+                    </span>
+                    <label>GSS Tools</label>
+                </li>
+
                 <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock-history" viewBox="0 0 16 16">
-                    <path d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022zm2.004.45a7 7 0 0 0-.985-.299l.219-.976q.576.129 1.126.342zm1.37.71a7 7 0 0 0-.439-.27l.493-.87a8 8 0 0 1 .979.654l-.615.789a7 7 0 0 0-.418-.302zm1.834 1.79a7 7 0 0 0-.653-.796l.724-.69q.406.429.747.91zm.744 1.352a7 7 0 0 0-.214-.468l.893-.45a8 8 0 0 1 .45 1.088l-.95.313a7 7 0 0 0-.179-.483m.53 2.507a7 7 0 0 0-.1-1.025l.985-.17q.1.58.116 1.17zm-.131 1.538q.05-.254.081-.51l.993.123a8 8 0 0 1-.23 1.155l-.964-.267q.069-.247.12-.501m-.952 2.379q.276-.436.486-.908l.914.405q-.24.54-.555 1.038zm-.964 1.205q.183-.183.35-.378l.758.653a8 8 0 0 1-.401.432z"/>
-                    <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0z"/>
-                    <path d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5"/>
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-clock-history" viewBox="0 0 16 16">
+                        <path d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022zm2.004.45a7 7 0 0 0-.985-.299l.219-.976q.576.129 1.126.342zm1.37.71a7 7 0 0 0-.439-.27l.493-.87a8 8 0 0 1 .979.654l-.615.789a7 7 0 0 0-.418-.302zm1.834 1.79a7 7 0 0 0-.653-.796l.724-.69q.406.429.747.91zm.744 1.352a7 7 0 0 0-.214-.468l.893-.45a8 8 0 0 1 .45 1.088l-.95.313a7 7 0 0 0-.179-.483m.53 2.507a7 7 0 0 0-.1-1.025l.985-.17q.1.58.116 1.17zm-.131 1.538q.05-.254.081-.51l.993.123a8 8 0 0 1-.23 1.155l-.964-.267q.069-.247.12-.501m-.952 2.379q.276-.436.486-.908l.914.405q-.24.54-.555 1.038zm-.964 1.205q.183-.183.35-.378l.758.653a8 8 0 0 1-.401.432z"/>
+                        <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0z"/>
+                        <path d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5"/>
                     </svg>
-                    Shift Handover</li>
+                    </span>
+                    <label>Shift Handover</label>
+                </li>
+
                 <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-database" viewBox="0 0 16 16">
-                    <path d="M4.318 2.687C5.234 2.271 6.536 2 8 2s2.766.27 3.682.687C12.644 3.125 13 3.627 13 4c0 .374-.356.875-1.318 1.313C10.766 5.729 9.464 6 8 6s-2.766-.27-3.682-.687C3.356 4.875 3 4.373 3 4c0-.374.356-.875 1.318-1.313M13 5.698V7c0 .374-.356.875-1.318 1.313C10.766 8.729 9.464 9 8 9s-2.766-.27-3.682-.687C3.356 7.875 3 7.373 3 7V5.698c.271.202.58.378.904.525C4.978 6.711 6.427 7 8 7s3.022-.289 4.096-.777A5 5 0 0 0 13 5.698M14 4c0-1.007-.875-1.755-1.904-2.223C11.022 1.289 9.573 1 8 1s-3.022.289-4.096.777C2.875 2.245 2 2.993 2 4v9c0 1.007.875 1.755 1.904 2.223C4.978 15.71 6.427 16 8 16s3.022-.289 4.096-.777C13.125 14.755 14 14.007 14 13zm-1 4.698V10c0 .374-.356.875-1.318 1.313C10.766 11.729 9.464 12 8 12s-2.766-.27-3.682-.687C3.356 10.875 3 10.373 3 10V8.698c.271.202.58.378.904.525C4.978 9.71 6.427 10 8 10s3.022-.289 4.096-.777A5 5 0 0 0 13 8.698m0 3V13c0 .374-.356.875-1.318 1.313C10.766 14.729 9.464 15 8 15s-2.766-.27-3.682-.687C3.356 13.875 3 13.373 3 13v-1.302c.271.202.58.378.904.525C4.978 12.71 6.427 13 8 13s3.022-.289 4.096-.777c.324-.147.633-.323.904-.525"/>
-                    </svg>
-                    Historical Data</li>
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-database" viewBox="0 0 16 16">
+                        <path d="M4.318 2.687C5.234 2.271 6.536 2 8 2s2.766.27 3.682.687C12.644 3.125 13 3.627 13 4c0 .374-.356.875-1.318 1.313C10.766 5.729 9.464 6 8 6s-2.766-.27-3.682-.687C3.356 4.875 3 4.373 3 4c0-.374.356-.875 1.318-1.313M13 5.698V7c0 .374-.356.875-1.318 1.313C10.766 8.729 9.464 9 8 9s-2.766-.27-3.682-.687C3.356 7.875 3 7.373 3 7V5.698c.271.202.58.378.904.525C4.978 6.711 6.427 7 8 7s3.022-.289 4.096-.777A5 5 0 0 0 13 5.698M14 4c0-1.007-.875-1.755-1.904-2.223C11.022 1.289 9.573 1 8 1s-3.022.289-4.096.777C2.875 2.245 2 2.993 2 4v9c0 1.007.875 1.755 1.904 2.223C4.978 15.71 6.427 16 8 16s3.022-.289 4.096-.777C13.125 14.755 14 14.007 14 13zm-1 4.698V10c0 .374-.356.875-1.318 1.313C10.766 11.729 9.464 12 8 12s-2.766-.27-3.682-.687C3.356 10.875 3 10.373 3 10V8.698c.271.202.58.378.904.525C4.978 9.71 6.427 10 8 10s3.022-.289 4.096-.777A5 5 0 0 0 13 8.698m0 3V13c0 .374-.356.875-1.318 1.313C10.766 14.729 9.464 15 8 15s-2.766-.27-3.682-.687C3.356 13.875 3 13.373 3 13v-1.302c.271.202.58.378.904.525C4.978 12.71 6.427 13 8 13s3.022-.289 4.096-.777c.324-.147.633-.323.904-.525"/>
+                        </svg>
+                    </span>
+                    <label>Historical Data</span>
+                </li>
             </ul>
             </div>
         </aside>
@@ -99,7 +118,7 @@
 
                 <h2>Latest Updates</h2>
                 <!--Bulletin Board-->
-                <div class="bulletin">
+                <section class="bulletin">
                     <div class="tabs">
                         <button class="tab-active" onclick="">OMI Announcements</button>
                         <button>IPO Updates</button>
@@ -120,43 +139,29 @@
                         <small>January 3 2026 3:00 PM</small>
                         <h4>SSL Not working right now</h4>
                     </div>
+                </section>
 
-                </div>
-
-                <div>
-                    <p>STARTING POINTLorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <p>Vestibulum ante ipsum primis in faucibus orci luctus.</p>
-                    <p>Curabitur at lacus ac velit ornare lobortis.</p>  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <p>Vestibulum ante ipsum primis in faucibus orci luctus.</p>
-                    <p>Curabitur at lacus ac velit ornare lobortis.</p>  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <p>Curabitur at lacus ac velit ornare lobortis.</p>  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <p>Vestibulum ante ipsum primis in faucibus orci luctus.</p>
-                    <p>Curabitur at lacus ac velit ornare lobortis.</p>  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <p>Vestibulum ante ipsum primis in faucibus orci luctus.</p>
-                    <p>Curabitur at lacus ac velit ornare lobortis.</p>  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <p>Vestibulum ante ipsum primis in faucibus orci luctus.</p>
-                    <p>Curabitur at lacus ac velit ornare lobortis.</p>  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <p>Vestibulum ante ipsum primis in faucibus orci luctus.</p>
-                    <p>Curabitur at lacus ac velit ornare lobortis.</p>  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <p>Vestibulum ante ipsum primis in faucibus orci luctus.</p>
-                    <p>Curabitur at lacus ac velit ornare lobortis.</p>  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <p>Vestibulum ante ipsum primis in faucibus orci luctus.</p>
-                    <p>Curabitur at lacus ac velit ornare lobortis.</p>  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <p>Vestibulum ante ipsum primis in faucibus orci luctus.</p>
-                    <p>Curabitur at lacus ac velit ornare lobortis.</p>  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <p>Vestibulum ante ipsum primis in faucibus orci luctus.</p>
-                    <p>Curabitur at lacus ac velit ornare lobortis.</p>  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <p>Vestibulum ante ipsum primis in faucibus orci luctus.</p>
-                    <p>Curabitur at lacus ac velit ornare lobortis.</p>  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <p>Vestibulum ante ipsum primis in faucibus orci luctus.</p>
-                    <p>Curabitur at lacus ac velit ornare lobortis.</p>  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <p>Vestibulum ante ipsum primis in faucibus orci luctus.</p>
-                    <p>Curabitur at lacus ac velit ornare lobortis.</p>  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <p>Vestibulum ante ipsum primis in faucibus orci luctus.</p>
-                    <p>Curabitur at lacus ac velit ornare lobortis.</p>  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <p>Vestibulum ante ipsum primis in faucibus orci luctus.</p>
-                    <p>Curabitur at lacus ac velit ornare lobortis.</p>
-                </div>
+                <section id="historical-data" class="historical-data">
+                    <div class="container">
+                    <h2>Historical Data</h2>
+                    <p class="section-subtitle">Access and analyze historical market data and trends</p>
+                    <div class="data-grid-two">
+                    <div class="data-card">
+                    <div class="data-icon">📊</div>
+                    <h3>IPOs</h3>
+                    <p>Comprehensive historical data on Initial Public Offerings, including pricing trends, performance metrics, and market reception analysis</p>
+                    <button class="btn-secondary">Explore Data</button>
+                    </div>
+                    <div class="data-card">
+                    <div class="data-icon">💻</div>
+                    <h3>Code Calls</h3>
+                    <p>Historical records of API calls, system codes, and technical reference data for development and integration purposes</p>
+                    <button class="btn-secondary">Explore Data</button>
+                    </div>
+                    </div>
+                    </div>
+                </section>
+                
             </div>
         </main>
     </div>
@@ -165,9 +170,13 @@
     document.addEventListener('DOMContentLoaded', function() {
     const toggleButton = document.getElementById('toggle-sidebar');
     const gridContainer = document.querySelector('.wrapper');
+    const listContainer = document.querySelector('.sidebar-list')
+    const compLogo = document.querySelector('.company-logo')
 
     toggleButton.addEventListener('click', () => {
         gridContainer.classList.toggle('collapsed');
+        listContainer.classList.toggle('collapsed');
+        compLogo.classList.toggle('collapsed');
     });
 });
 </script>
