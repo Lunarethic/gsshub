@@ -7,6 +7,31 @@ body {
     height: 100vh;
 }
 
+/*Scroll Bar*/
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #0094B3 #ffffff; /* thumb color and track color */
+}
+
+body::-webkit-scrollbar {
+  width: 4px; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #2D3748; /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #0094B3;   /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 2px solid #2D3748;  /* creates padding around scroll thumb */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #63B3ED; /* color of the scroll thumb on hover */
+}
+
 /*Wrapper that encompasses both sidebar and mainview*/
 .wrapper {
     display: grid;
@@ -128,6 +153,7 @@ body {
 }
 
 .sidebar-list label{
+  cursor:pointer;
   white-space: nowrap;
   overflow: hidden;
   opacity: 100;
@@ -155,35 +181,109 @@ body {
     background-color: #ffffff;
 }
 
-
-/*SECTION 1 - Carousel CSS*/
-@keyframes pulse-gradient {
-  0% {background-position: 0% 50%;}
-  20% {background-position: 80% 20%;}
-  40% {background-position: 20% 80%;}
-  60% {background-position: 100% 50%;}
-  80% {background-position: 40% 0%;}
-  100% {background-position: 0% 50%;}
-}
-
-.sc1-carousel{
-  color: white;
+.section{
   width: 100%;
-  height: 1000px;
-  max-height: 40vh;
-  overflow:hidden;
-  background-color: #ffffff;
-  background: linear-gradient(45deg, #11abda, #0CC5FB, #6eccdf, #63bcce);
-  background-size: 200% 200%;
-  animation: pulse-gradient 95s ease-in-out infinite;
-
+  height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/*SECTION 2 - Bulletin Board CSS*/
+.content-container {
+  height: 90%;
+  width: 90%;
+  background: #fff;
+  border-radius: 20px;
+  overflow:hidden;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
 
+/*SECTION 1 -  Announcements CSS*/
+.announcement-box{
+  display:grid;
+  grid-template-rows: auto 1fr auto;
+  border-radius: 20px 20px 0 0;
+}
+
+.announcement-box .header{
+color:white;
+font-size: 1.8em;
+background-color: #0094B3;
+padding:5px;
+padding-left: 15px;
+}
+
+.announcement-box .content{
+  display: grid;
+  grid-auto-rows: min-content;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+.announcement-box .content .announcement{
+  padding-left:10px;
+  background-color: #F5F5FA;
+}
+.announcement-box .content .announcement:nth-child(even) {
+  background-color: #e9e9f3;
+}
+
+.announcement-box .content .announcement:not(:last-child) {
+  border-bottom: 1px solid rgba(14, 14, 14, 0.3);
+}
+
+.announcement-box .footer{
+display:flex;
+justify-content: flex-end;
+padding: 5px;
+padding-right: 20px;
+
+color:white;
+background-color: #0094B3;
+}
+
+.announcement-box .footer button{
+  border: 1px solid #08062A;
+  padding:2px 8px;
+}
+
+.announcement-box .footer button:hover{
+  background-color: #08062a75;
+}
+
+/*SECTION 3 - Quick Links CSS*/
+
+.sec-qlinks{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  justify-content: center;
+  max-width: 1300px;
+  height: 500px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+.card{
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border-color: rgba(93, 179, 211,0);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.20s ease, border-color 0.3s ease;
+}
+
+.card:hover{
+  cursor: pointer;
+  border-style: solid;
+  border-color: rgba(93, 179, 211,1);
+  transform: scale(1.02);
+  transition: transform 0.20s ease,border-color 0.3s ease;
+}
+
+
+/*SECTION 2 - Quick Links CSS*/
+/*
 .tabs{
     overflow: hidden;
 
@@ -218,33 +318,4 @@ body {
   border-top: none;
   background-color: #fff;
 }
-
-/*SECTION 3 - Quick Links CSS*/
-
-.sc3-qlinks{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  justify-content: center;
-  max-width: 1300px;
-  height: 500px;
-  margin: 0 auto;
-  padding-bottom: 50px;
-}
-
-.card{
-  background: #fff;
-  border-radius: 12px;
-  padding: 1.5rem;
-  border-color: rgba(93, 179, 211,0);
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.20s ease, border-color 0.3s ease;
-}
-
-.card:hover{
-  cursor: pointer;
-  border-style: solid;
-  border-color: rgba(93, 179, 211,1);
-  transform: scale(1.02);
-  transition: transform 0.20s ease,border-color 0.3s ease;
-}
+*/
