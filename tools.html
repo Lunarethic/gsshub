@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tools & Integrations - Nasdaq</title>
+    <link rel="stylesheet" href="styles/siteformat.css" />
+    <link rel="stylesheet" href="styles/tools.css" />
+  </head>
+  <body>
+    <!-- Back to Home Button (Upper Left, Hover Effect) -->
+    <a class="back-home-btn" href="index.html">
+      <span class="back-arrow">←</span>
+      <span class="back-text">Back to Home</span>
+    </a>
+
+    <div class="page page-wide">
+      <header class="page-top">
+        <div class="page-top-left">
+          <h1>Tools & Integrations</h1>
+          <p class="muted">Quick access to your monitoring, IT tools, and third-party integrations</p>
+        </div>
+        <div class="page-top-right">
+          <button class="btn-primary" id="addIntegration">+ Add Integration</button>
+        </div>
+      </header>
+
+      <main class="tools-main">
+        <div class="panel">
+          <div class="panel-inner">
+            <div class="tools-header">
+              <h3>Connected Tools</h3>
+              <input class="search" id="toolSearch" placeholder="Search integrations..." />
+            </div>
+
+            <div class="tools-grid">
+              <div class="tool-card" data-tool="Datadog" data-status="active">
+                <div class="tool-status active"></div>
+                <div class="tool-icon datadog">
+                  <span>DD</span>
+                </div>
+                <div class="tool-content">
+                  <div class="tool-title">Datadog</div>
+                  <div class="tool-desc">Metrics, traces and logs ingestion platform</div>
+                  <div class="tool-meta">
+                    <span class="status-badge active">Active</span>
+                    <span class="tool-info">15 dashboards</span>
+                  </div>
+                </div>
+                <div class="tool-actions">
+                  <button class="btn-icon" title="Settings">⚙️</button>
+                </div>
+              </div>
+
+              <div class="tool-card" data-tool="Splunk" data-status="active">
+                <div class="tool-status active"></div>
+                <div class="tool-icon splunk">
+                  <span>SP</span>
+                </div>
+                <div class="tool-content">
+                  <div class="tool-title">Splunk</div>
+                  <div class="tool-desc">Search, analyze and visualize your machine data</div>
+                  <div class="tool-meta">
+                    <span class="status-badge active">Active</span>
+                    <span class="tool-info">8 saved searches</span>
+                  </div>
+                </div>
+                <div class="tool-actions">
+                  <button class="btn-icon" title="Settings">⚙️</button>
+                </div>
+              </div>
+
+              <div class="tool-card" data-tool="JIRA" data-status="active">
+                <div class="tool-status active"></div>
+                <div class="tool-icon jira">
+                  <span>JI</span>
+                </div>
+                <div class="tool-content">
+                  <div class="tool-title">JIRA</div>
+                  <div class="tool-desc">Create and link issues from incidents</div>
+                  <div class="tool-meta">
+                    <span class="status-badge active">Active</span>
+                    <span class="tool-info">142 open tickets</span>
+                  </div>
+                </div>
+                <div class="tool-actions">
+                  <button class="btn-icon" title="Settings">⚙️</button>
+                </div>
+              </div>
+
+              <div class="tool-card" data-tool="OMI" data-status="active">
+                <div class="tool-status active"></div>
+                <div class="tool-icon omi">
+                  <span>OM</span>
+                </div>
+                <div class="tool-content">
+                  <div class="tool-title">OMI</div>
+                  <div class="tool-desc">On-premise monitoring and alerting connector</div>
+                  <div class="tool-meta">
+                    <span class="status-badge active">Active</span>
+                    <span class="tool-info">3 nodes connected</span>
+                  </div>
+                </div>
+                <div class="tool-actions">
+                  <button class="btn-icon" title="Settings">⚙️</button>
+                </div>
+              </div>
+
+              <div class="tool-card" data-tool="ServiceNow" data-status="active">
+                <div class="tool-status active"></div>
+                <div class="tool-icon servicenow">
+                  <span>SN</span>
+                </div>
+                <div class="tool-content">
+                  <div class="tool-title">ServiceNow</div>
+                  <div class="tool-desc">IT service management and ticketing platform</div>
+                  <div class="tool-meta">
+                    <span class="status-badge active">Active</span>
+                    <span class="tool-info">28 workflows</span>
+                  </div>
+                </div>
+                <div class="tool-actions">
+                  <button class="btn-icon" title="Settings">⚙️</button>
+                </div>
+              </div>
+
+              <div class="tool-card" data-tool="PagerDuty" data-status="inactive">
+                <div class="tool-status inactive"></div>
+                <div class="tool-icon pagerduty">
+                  <span>PD</span>
+                </div>
+                <div class="tool-content">
+                  <div class="tool-title">PagerDuty</div>
+                  <div class="tool-desc">Incident response and on-call management</div>
+                  <div class="tool-meta">
+                    <span class="status-badge inactive">Inactive</span>
+                    <span class="tool-info">Not configured</span>
+                  </div>
+                </div>
+                <div class="tool-actions">
+                  <button class="btn-icon" title="Configure">🔧</button>
+                </div>
+              </div>
+
+              <div class="tool-card" data-tool="Slack" data-status="active">
+                <div class="tool-status active"></div>
+                <div class="tool-icon slack">
+                  <span>SL</span>
+                </div>
+                <div class="tool-content">
+                  <div class="tool-title">Slack</div>
+                  <div class="tool-desc">Team collaboration and notification hub</div>
+                  <div class="tool-meta">
+                    <span class="status-badge active">Active</span>
+                    <span class="tool-info">5 channels linked</span>
+                  </div>
+                </div>
+                <div class="tool-actions">
+                  <button class="btn-icon" title="Settings">⚙️</button>
+                </div>
+              </div>
+
+              <div class="tool-card" data-tool="GitHub" data-status="active">
+                <div class="tool-status active"></div>
+                <div class="tool-icon github">
+                  <span>GH</span>
+                </div>
+                <div class="tool-content">
+                  <div class="tool-title">GitHub</div>
+                  <div class="tool-desc">Source control and CI/CD pipeline integration</div>
+                  <div class="tool-meta">
+                    <span class="status-badge active">Active</span>
+                    <span class="tool-info">12 repos linked</span>
+                  </div>
+                </div>
+                <div class="tool-actions">
+                  <button class="btn-icon" title="Settings">⚙️</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Integration Stats Panel -->
+        <div class="stats-panel">
+          <div class="stat-card">
+            <div class="stat-icon">📊</div>
+            <div class="stat-content">
+              <div class="stat-value">7</div>
+              <div class="stat-label">Active Integrations</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">🔄</div>
+            <div class="stat-content">
+              <div class="stat-value">1,247</div>
+              <div class="stat-label">API Calls Today</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">✅</div>
+            <div class="stat-content">
+              <div class="stat-value">99.8%</div>
+              <div class="stat-label">Uptime</div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="page-foot muted">
+        Manage connectors and credentials for each integration • Last sync: 5 minutes ago
+      </footer>
+    </div>
+
+    <!-- Tool Configuration Modal -->
+    <div id="toolModal" class="modal">
+      <div class="modal-content">
+        <button id="closeToolModal" class="close-modal">×</button>
+        <div class="modal-header">
+          <h3 id="modalTitle">Integration Configuration</h3>
+        </div>
+        <div class="modal-body" id="modalBody">
+          <div class="config-section">
+            <label>API Endpoint</label>
+            <input type="text" class="form-input" placeholder="https://api.example.com/v1" />
+          </div>
+          <div class="config-section">
+            <label>API Key</label>
+            <input type="password" class="form-input" placeholder="Enter API key" />
+          </div>
+          <div class="config-section">
+            <label>Webhook URL</label>
+            <input type="text" class="form-input" placeholder="https://your-webhook-url.com" />
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn-ghost" id="modalCloseBtn">Cancel</button>
+          <button class="btn-primary">Save Configuration</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- AI Chatbot Button -->
+    <div class="ai-chatbot-button" id="ai-chatbot-btn">
+      <div class="chatbot-icon">
+        <span class="chat-icon">💬</span>
+      </div>
+      <span class="chatbot-tooltip">AI Assistant</span>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const modal = document.getElementById('toolModal');
+        const modalTitle = document.getElementById('modalTitle');
+
+        // Tool card click handler
+        document.querySelectorAll('.tool-card').forEach(card => {
+          card.addEventListener('click', (e) => {
+            // Don't open modal if clicking on settings button
+            if (e.target.closest('.btn-icon')) {
+              e.stopPropagation();
+              const toolName = card.dataset.tool;
+                            modal.style.display = 'flex';
+              return;
+            }
+
+            // Open tool page/dashboard
+            const toolName = card.dataset.tool;
+            modalTitle.textContent = `${toolName} Dashboard`;
+            modal.style.display = 'flex';
+          });
+        });
+
+        // Settings button click handler
+        document.querySelectorAll('.btn-icon').forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const card = e.target.closest('.tool-card');
+            const toolName = card.dataset.tool;
+            modalTitle.textContent = `${toolName} Configuration`;
+            modal.style.display = 'flex';
+          });
+        });
+
+        // Close modal handlers
+        document.getElementById('closeToolModal').addEventListener('click', () => {
+          modal.style.display = 'none';
+        });
+
+        document.getElementById('modalCloseBtn').addEventListener('click', () => {
+          modal.style.display = 'none';
+        });
+
+        // Close modal when clicking outside
+        window.addEventListener('click', (e) => {
+          if (e.target === modal) {
+            modal.style.display = 'none';
+          }
+        });
+
+        // Add Integration button
+        document.getElementById('addIntegration').addEventListener('click', () => {
+          modalTitle.textContent = 'Add New Integration';
+          document.getElementById('modalBody').innerHTML = `
+            <div class="config-section">
+              <label>Integration Type</label>
+              <select class="form-input">
+                <option>Select integration type...</option>
+                <option>Monitoring Tool</option>
+                <option>Communication Platform</option>
+                <option>CI/CD Pipeline</option>
+                <option>Cloud Service</option>
+                <option>Custom API</option>
+              </select>
+            </div>
+            <div class="config-section">
+              <label>Integration Name</label>
+              <input type="text" class="form-input" placeholder="Enter integration name" />
+            </div>
+            <div class="config-section">
+              <label>API Endpoint</label>
+              <input type="text" class="form-input" placeholder="https://api.example.com/v1" />
+            </div>
+            <div class="config-section">
+              <label>Authentication Method</label>
+              <select class="form-input">
+                <option>API Key</option>
+                <option>OAuth 2.0</option>
+                <option>Basic Auth</option>
+                <option>Bearer Token</option>
+              </select>
+            </div>
+          `;
+          modal.style.display = 'flex';
+        });
+
+        // Search functionality
+        document.getElementById('toolSearch').addEventListener('input', (e) => {
+          const searchTerm = e.target.value.toLowerCase();
+          document.querySelectorAll('.tool-card').forEach(card => {
+            const title = card.querySelector('.tool-title').textContent.toLowerCase();
+            const desc = card.querySelector('.tool-desc').textContent.toLowerCase();
+            if (title.includes(searchTerm) || desc.includes(searchTerm)) {
+              card.style.display = '';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+
+        // AI Chatbot button
+        const chatbotBtn = document.getElementById('ai-chatbot-btn');
+        if (chatbotBtn) {
+          chatbotBtn.addEventListener('click', () => {
+            alert('AI Assistant feature coming soon!');
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

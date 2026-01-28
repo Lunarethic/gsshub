@@ -1,0 +1,103 @@
+/*HEADER SECTION*/
+
+.page-header {
+    display: grid;
+    grid-auto-columns: 3fr 1fr;
+    grid-auto-flow: column;
+    width: 100%;
+    height: auto;
+    
+    background: linear-gradient(135deg, #0087BA, #00C6FF);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+    color: white;
+}
+
+/* TITLE PART=================*/
+.header-left{
+    padding: 50px 130px;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-left:60px;
+    margin-bottom:1rem;
+}
+
+.page-header p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+}
+
+
+/* BUTTON  PART=============*/
+.header-right{
+    display: grid;
+    place-content: center;
+    gap: 1em;
+}
+
+.button{
+    display: inline-flex;
+    align-items: center;
+
+    font-size: 16px;
+    font-weight: 600;
+    gap: 10px;
+    padding: 10px 20px;
+    
+    border-radius: 8px;
+    background-color: #0087BA;
+    transition: all 0.3s;
+}
+
+.button:hover {
+    background-color:#005A7A;
+}
+
+
+
+/*PAGECONTENT*/
+
+.page-content{
+margin-top: 2rem;
+width: 100%;
+height: 100vh;
+display: grid;
+grid-auto-columns: 1fr 2fr;
+grid-auto-flow: column;
+}
+
+.sc-format{
+max-height: 98%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.sc-card{
+width: 95%;
+height: 100%;
+overflow:hidden;
+
+border-radius: 12px;
+background-color: #ffffff;
+border:1px solid rgba(216, 216, 216, 0.2);
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+/*SIDEBAR STUFF==============================*/
+
+.sc-sidebar{
+display: grid;
+grid-auto-rows: 1fr;
+
+}
+
+/*MAINVIEW STUFF===================================*/
+
+.sc-content{
+display: grid;
+grid-auto-rows: 1fr;
+
+}
