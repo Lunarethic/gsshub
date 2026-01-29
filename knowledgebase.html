@@ -118,115 +118,226 @@
         </section>
 
         <section class="page-content">
-            <aside class="kb-format">
-                <div class="kb-card kb-sidebar">
-                    <!--HEADER PART-->
-                    <header>
-                        <h3 style="font-size: 1.3rem; margin: 15px; font-weight:bold;">Articles</h3>
-                        <!--Search and DROPDOWN LIST-->
-                        <div class="search-bar">
-                            <div id="select">
-                                <div>
-                                    <span id="selectText">All categories</span>
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M11.8079 14.7695L8.09346 10.3121C7.65924 9.79109 8.02976 9 8.70803 9L15.292 9C15.9702 9 16.3408 9.79108 15.9065 10.3121L12.1921 14.7695C12.0921 14.8895 11.9079 14.8895 11.8079 14.7695Z" fill="#ffffff"/>
-                                    </svg>
-                                </div>
-
-                                <ul id="list">
-                                    <li class="options">All Categories</li>
-                                    <li class="options">Operations</li>
-                                    <li class="options">Team</li>
-                                    <li class="options">Resources</li>
-                                    <li class="options">Security</li>
-                                    <li class="options">Development</li> 
-                                </ul>
-                            </div>
-                            <input id="inputField" type="text" placeholder="Search in All Categories"/>
-                        </div>
-                        <!--========end of header===========-->
-                    </header>
-                    
-                    <!-- Article Items -->
-                        <ul id="kbList" class="kb-list">
-                            <li class="kb-item active" data-id="1" data-category="Operations" data-content="<h3>Overview</h3><p>This guide covers the essential steps for running scripts in our production environment.</p><h3>Prerequisites</h3><ul><li>Valid credentials</li><li>VPN access</li><li>Script permissions</li></ul><h3>Steps</h3><ol><li>Connect to VPN</li><li>Navigate to scripts directory</li><li>Run: <code>./script_name.sh</code></li><li>Monitor logs for output</li></ol><h3>Best Practices</h3><ul><li>Always test scripts in staging environment first</li><li>Keep backups before running destructive operations</li><li>Document all script executions in the runbook</li><li>Monitor system resources during execution</li></ul><h3>Troubleshooting</h3><p>Common issues and their solutions:</p><ul><li><strong>Permission denied:</strong> Check file permissions with <code>ls -la</code></li><li><strong>Command not found:</strong> Ensure script path is correct</li><li><strong>Timeout errors:</strong> Increase timeout values in configuration</li></ul>">
-                                <div class="kb-item-icon">📜</div>
-                                <div class="kb-item-content">
-                                    <div class="kb-item-title">How to Run Scripts</div>
-                                    <div class="kb-item-meta">
-                                        <span class="meta-category">Operations</span>
-                                        <span class="meta-dot">•</span>
-                                        <span class="meta-time">Updated 2 days ago</span>
-                                    </div>
-                                </div>
-                                <div class="kb-item-badge new">New</div>
-                            </li>
-
-                            <li class="kb-item" data-id="2" data-category="Team" data-content="<h3>Current Rotation</h3><p>Our on-call schedule operates on a weekly rotation basis.</p><h3>Schedule</h3><table><tr><th>Week</th><th>Primary</th><th>Secondary</th></tr><tr><td>Jan 13-19</td><td>John Doe</td><td>Jane Smith</td></tr><tr><td>Jan 20-26</td><td>Mike Johnson</td><td>Sarah Williams</td></tr></table><h3>Emergency Contacts</h3><ul><li>Escalation: +1-555-0100</li><li>Management: +1-555-0200</li></ul><h3>On-Call Responsibilities</h3><ol><li>Monitor alerts and respond within 15 minutes</li><li>Escalate critical issues to management</li><li>Document all incidents in the incident log</li><li>Participate in post-mortem reviews</li></ol><h3>Handoff Process</h3><p>Every Monday at 9:00 AM EST:</p><ul><li>Review open incidents with incoming on-call</li><li>Transfer any ongoing issues</li><li>Update on-call calendar</li><li>Send handoff email to team</li></ul>">
-                                <div class="kb-item-icon">📞</div>
-                                <div class="kb-item-content">
-                                    <div class="kb-item-title">On-Call Rotation</div>
-                                    <div class="kb-item-meta">
-                                        <span class="meta-category">Team</span>
-                                        <span class="meta-dot">•</span>
-                                        <span class="meta-time">Updated 1 week ago</span>
-                                    </div>
-                                </div>
-                            </li>
-
-                                                            <div class="kb-item-content">
-                                    <div class="kb-item-title">SSL Certificate Guide</div>
-                                    <div class="kb-item-meta">
-                                        <span class="meta-category">Security</span>
-                                        <span class="meta-dot">•</span>
-                                        <span class="meta-time">Updated 5 days ago</span>
-                                    </div>
-                                </div>
-                                <div class="kb-item-badge important">Important</div>
-                            </li>
-
-                            <li class="kb-item" data-id="5" data-category="Development" data-content="<h3>API Documentation</h3><p>Comprehensive guide to our internal APIs and integration points.</p><h3>Available Endpoints</h3><ul><li><code>GET /api/v1/status</code> - System status</li><li><code>POST /api/v1/data</code> - Submit data</li><li><code>GET /api/v1/reports</code> - Retrieve reports</li></ul><h3>Authentication</h3><p>All API requests require Bearer token authentication.</p><pre>Authorization: Bearer YOUR_TOKEN_HERE</pre><h3>Rate Limiting</h3><p>API endpoints are rate limited to:</p><ul><li>Standard tier: 100 requests/minute</li><li>Premium tier: 1000 requests/minute</li></ul><h3>Error Codes</h3><table><tr><th>Code</th><th>Description</th></tr><tr><td>400</td><td>Bad Request</td></tr><tr><td>401</td><td>Unauthorized</td></tr><tr><td>403</td><td>Forbidden</td></tr><tr><td>404</td><td>Not Found</td></tr><tr><td>429</td><td>Too Many Requests</td></tr><tr><td>500</td><td>Internal Server Error</td></tr></table>">
-                                <div class="kb-item-icon">🔌</div>
-                                <div class="kb-item-content">
-                                    <div class="kb-item-title">API Documentation</div>
-                                    <div class="kb-item-meta">
-                                        <span class="meta-category">Development</span>
-                                        <span class="meta-dot">•</span>
-                                        <span class="meta-time">Updated 1 day ago</span>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="kb-item" data-id="6" data-category="Operations" data-content="<h3>Backup and Recovery Procedures</h3><p>Critical procedures for system backup and disaster recovery.</p><h3>Backup Schedule</h3><ul><li>Daily: Incremental backups at 2:00 AM EST</li><li>Weekly: Full backups on Sundays at 3:00 AM EST</li><li>Monthly: Archive backups on the 1st of each month</li></ul><h3>Recovery Time Objectives</h3><ul><li>Critical Systems: RTO < 1 hour</li><li>Production Systems: RTO < 4 hours</li><li>Non-critical Systems: RTO < 24 hours</li></ul><h3>Testing</h3><p>Backup restoration tests are performed:</p><ul><li>Monthly for critical systems</li><li>Quarterly for all systems</li><li>Annually for full disaster recovery simulation</li></ul>">
-                                <div class="kb-item-icon">💾</div>
-                                <div class="kb-item-content">
-                                    <div class="kb-item-title">Backup & Recovery</div>
-                                    <div class="kb-item-meta">
-                                        <span class="meta-category">Operations</span>
-                                        <span class="meta-dot">•</span>
-                                        <span class="meta-time">Updated 3 days ago</span>
-                                    </div>
-                                </div>
-                                <div class="kb-item-badge important">Critical</div>
-                            </li>
-                        </ul>
-                        <!--=====================================-->
-                    <main>
-
-                    </main>
+            <div class="KBwrapper kb-sidebar">
+                <!--HEADER PART-->
+                <header>
+                <h3 style="font-size: 1.2rem; margin: 8px 0px 0px 15px; font-weight:bold;">Articles</h3>
+                <!--Search and DROPDOWN LIST-->
+                <div class="search-bar">
+                <div id="select">
+                <div>
+                <span id="selectText">All categories</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.8079 14.7695L8.09346 10.3121C7.65924 9.79109 8.02976 9 8.70803 9L15.292 9C15.9702 9 16.3408 9.79108 15.9065 10.3121L12.1921 14.7695C12.0921 14.8895 11.9079 14.8895 11.8079 14.7695Z" fill="#ffffff"/>
+                </svg>
                 </div>
-            </aside>
 
-            <main class="kb-format">
-                <div class="kb-card kb-content">
-                    <header>
-                        <h2 class="KBtitle">How to Run Scripts</h2>
-                        <span class="KBarticleStats">📅 Last Updated: 222 days ago</span>
-                        <span class="KBarticleStats">👤Author: System Admin</span>
-                        <span class="KBarticleStats">👁️Views: 123456789</span>
-                    </header>
-                    <main>
-                        <div class="article-content" id="kbContent">
+                <ul id="list">
+                <li class="options">All Categories</li>
+                <li class="options">Operations</li>
+                <li class="options">Team</li>
+                <li class="options">Resources</li>
+                <li class="options">Security</li>
+                <li class="options">Development</li> 
+                </ul>
+                </div>
+                <input id="inputField" type="text" placeholder="Search in All Categories"/>
+                </div>
+                <!--========end of header===========-->
+                </header>
+                <!-- Article Items -->
+                <ul id="kbList" class="kb-list">
+                    <li class="kb-item active" data-id="1" data-category="Operations" data-content="<h3>Overview</h3><p>This guide covers the essential steps for running scripts in our production environment.</p><h3>Prerequisites</h3><ul><li>Valid credentials</li><li>VPN access</li><li>Script permissions</li></ul><h3>Steps</h3><ol><li>Connect to VPN</li><li>Navigate to scripts directory</li><li>Run: <code>./script_name.sh</code></li><li>Monitor logs for output</li></ol><h3>Best Practices</h3><ul><li>Always test scripts in staging environment first</li><li>Keep backups before running destructive operations</li><li>Document all script executions in the runbook</li><li>Monitor system resources during execution</li></ul><h3>Troubleshooting</h3><p>Common issues and their solutions:</p><ul><li><strong>Permission denied:</strong> Check file permissions with <code>ls -la</code></li><li><strong>Command not found:</strong> Ensure script path is correct</li><li><strong>Timeout errors:</strong> Increase timeout values in configuration</li></ul>">
+                        <div class="kb-item-icon">📜</div>
+                        <div class="kb-item-content">
+                            <div class="kb-item-title">How to Run Scripts</div>
+                            <div class="kb-item-meta">
+                                <span class="meta-category">Operations</span>
+                                <span class="meta-dot">•</span>
+                                <span class="meta-time">Updated 2 days ago</span>
+                            </div>
+                        </div>
+                        <div class="kb-item-badge new">New</div>
+                    </li>
+
+                    <li class="kb-item" data-id="2" data-category="Team" data-content="<h3>Current Rotation</h3><p>Our on-call schedule operates on a weekly rotation basis.</p><h3>Schedule</h3><table><tr><th>Week</th><th>Primary</th><th>Secondary</th></tr><tr><td>Jan 13-19</td><td>John Doe</td><td>Jane Smith</td></tr><tr><td>Jan 20-26</td><td>Mike Johnson</td><td>Sarah Williams</td></tr></table><h3>Emergency Contacts</h3><ul><li>Escalation: +1-555-0100</li><li>Management: +1-555-0200</li></ul><h3>On-Call Responsibilities</h3><ol><li>Monitor alerts and respond within 15 minutes</li><li>Escalate critical issues to management</li><li>Document all incidents in the incident log</li><li>Participate in post-mortem reviews</li></ol><h3>Handoff Process</h3><p>Every Monday at 9:00 AM EST:</p><ul><li>Review open incidents with incoming on-call</li><li>Transfer any ongoing issues</li><li>Update on-call calendar</li><li>Send handoff email to team</li></ul>">
+                        <div class="kb-item-icon">📞</div>
+                        <div class="kb-item-content">
+                            <div class="kb-item-title">On-Call Rotation</div>
+                            <div class="kb-item-meta">
+                                <span class="meta-category">Team</span>
+                                <span class="meta-dot">•</span>
+                                <span class="meta-time">Updated 1 week ago</span>
+                            </div>
+                        </div>
+                    </li>
+
+                                                    <div class="kb-item-content">
+                            <div class="kb-item-title">SSL Certificate Guide</div>
+                            <div class="kb-item-meta">
+                                <span class="meta-category">Security</span>
+                                <span class="meta-dot">•</span>
+                                <span class="meta-time">Updated 5 days ago</span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="kb-item" data-id="5" data-category="Development" data-content="<h3>API Documentation</h3><p>Comprehensive guide to our internal APIs and integration points.</p><h3>Available Endpoints</h3><ul><li><code>GET /api/v1/status</code> - System status</li><li><code>POST /api/v1/data</code> - Submit data</li><li><code>GET /api/v1/reports</code> - Retrieve reports</li></ul><h3>Authentication</h3><p>All API requests require Bearer token authentication.</p><pre>Authorization: Bearer YOUR_TOKEN_HERE</pre><h3>Rate Limiting</h3><p>API endpoints are rate limited to:</p><ul><li>Standard tier: 100 requests/minute</li><li>Premium tier: 1000 requests/minute</li></ul><h3>Error Codes</h3><table><tr><th>Code</th><th>Description</th></tr><tr><td>400</td><td>Bad Request</td></tr><tr><td>401</td><td>Unauthorized</td></tr><tr><td>403</td><td>Forbidden</td></tr><tr><td>404</td><td>Not Found</td></tr><tr><td>429</td><td>Too Many Requests</td></tr><tr><td>500</td><td>Internal Server Error</td></tr></table>">
+                        <div class="kb-item-icon">🔌</div>
+                        <div class="kb-item-content">
+                            <div class="kb-item-title">API Documentation</div>
+                            <div class="kb-item-meta">
+                                <span class="meta-category">Development</span>
+                                <span class="meta-dot">•</span>
+                                <span class="meta-time">Updated 1 day ago</span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="kb-item" data-id="6" data-category="Operations" data-content="<h3>Backup and Recovery Procedures</h3><p>Critical procedures for system backup and disaster recovery.</p><h3>Backup Schedule</h3><ul><li>Daily: Incremental backups at 2:00 AM EST</li><li>Weekly: Full backups on Sundays at 3:00 AM EST</li><li>Monthly: Archive backups on the 1st of each month</li></ul><h3>Recovery Time Objectives</h3><ul><li>Critical Systems: RTO < 1 hour</li><li>Production Systems: RTO < 4 hours</li><li>Non-critical Systems: RTO < 24 hours</li></ul><h3>Testing</h3><p>Backup restoration tests are performed:</p><ul><li>Monthly for critical systems</li><li>Quarterly for all systems</li><li>Annually for full disaster recovery simulation</li></ul>">
+                        <div class="kb-item-icon">💾</div>
+                        <div class="kb-item-content">
+                            <div class="kb-item-title">Backup & Recovery</div>
+                            <div class="kb-item-meta">
+                                <span class="meta-category">Operations</span>
+                                <span class="meta-dot">•</span>
+                                <span class="meta-time">Updated 3 days ago</span>
+                            </div>
+                        </div>
+                        <div class="kb-item-badge important">Critical</div>
+                    </li>
+                                                <li class="kb-item active" data-id="1" data-category="Operations" data-content="<h3>Overview</h3><p>This guide covers the essential steps for running scripts in our production environment.</p><h3>Prerequisites</h3><ul><li>Valid credentials</li><li>VPN access</li><li>Script permissions</li></ul><h3>Steps</h3><ol><li>Connect to VPN</li><li>Navigate to scripts directory</li><li>Run: <code>./script_name.sh</code></li><li>Monitor logs for output</li></ol><h3>Best Practices</h3><ul><li>Always test scripts in staging environment first</li><li>Keep backups before running destructive operations</li><li>Document all script executions in the runbook</li><li>Monitor system resources during execution</li></ul><h3>Troubleshooting</h3><p>Common issues and their solutions:</p><ul><li><strong>Permission denied:</strong> Check file permissions with <code>ls -la</code></li><li><strong>Command not found:</strong> Ensure script path is correct</li><li><strong>Timeout errors:</strong> Increase timeout values in configuration</li></ul>">
+                        <div class="kb-item-icon">📜</div>
+                        <div class="kb-item-content">
+                            <div class="kb-item-title">How to Run Scripts</div>
+                            <div class="kb-item-meta">
+                                <span class="meta-category">Operations</span>
+                                <span class="meta-dot">•</span>
+                                <span class="meta-time">Updated 2 days ago</span>
+                            </div>
+                        </div>
+                        <div class="kb-item-badge new">New</div>
+                    </li>
+
+                    <li class="kb-item" data-id="2" data-category="Team" data-content="<h3>Current Rotation</h3><p>Our on-call schedule operates on a weekly rotation basis.</p><h3>Schedule</h3><table><tr><th>Week</th><th>Primary</th><th>Secondary</th></tr><tr><td>Jan 13-19</td><td>John Doe</td><td>Jane Smith</td></tr><tr><td>Jan 20-26</td><td>Mike Johnson</td><td>Sarah Williams</td></tr></table><h3>Emergency Contacts</h3><ul><li>Escalation: +1-555-0100</li><li>Management: +1-555-0200</li></ul><h3>On-Call Responsibilities</h3><ol><li>Monitor alerts and respond within 15 minutes</li><li>Escalate critical issues to management</li><li>Document all incidents in the incident log</li><li>Participate in post-mortem reviews</li></ol><h3>Handoff Process</h3><p>Every Monday at 9:00 AM EST:</p><ul><li>Review open incidents with incoming on-call</li><li>Transfer any ongoing issues</li><li>Update on-call calendar</li><li>Send handoff email to team</li></ul>">
+                        <div class="kb-item-icon">📞</div>
+                        <div class="kb-item-content">
+                            <div class="kb-item-title">On-Call Rotation</div>
+                            <div class="kb-item-meta">
+                                <span class="meta-category">Team</span>
+                                <span class="meta-dot">•</span>
+                                <span class="meta-time">Updated 1 week ago</span>
+                            </div>
+                        </div>
+                    </li>
+
+                                                    <div class="kb-item-content">
+                            <div class="kb-item-title">SSL Certificate Guide</div>
+                            <div class="kb-item-meta">
+                                <span class="meta-category">Security</span>
+                                <span class="meta-dot">•</span>
+                                <span class="meta-time">Updated 5 days ago</span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="kb-item" data-id="5" data-category="Development" data-content="<h3>API Documentation</h3><p>Comprehensive guide to our internal APIs and integration points.</p><h3>Available Endpoints</h3><ul><li><code>GET /api/v1/status</code> - System status</li><li><code>POST /api/v1/data</code> - Submit data</li><li><code>GET /api/v1/reports</code> - Retrieve reports</li></ul><h3>Authentication</h3><p>All API requests require Bearer token authentication.</p><pre>Authorization: Bearer YOUR_TOKEN_HERE</pre><h3>Rate Limiting</h3><p>API endpoints are rate limited to:</p><ul><li>Standard tier: 100 requests/minute</li><li>Premium tier: 1000 requests/minute</li></ul><h3>Error Codes</h3><table><tr><th>Code</th><th>Description</th></tr><tr><td>400</td><td>Bad Request</td></tr><tr><td>401</td><td>Unauthorized</td></tr><tr><td>403</td><td>Forbidden</td></tr><tr><td>404</td><td>Not Found</td></tr><tr><td>429</td><td>Too Many Requests</td></tr><tr><td>500</td><td>Internal Server Error</td></tr></table>">
+                        <div class="kb-item-icon">🔌</div>
+                        <div class="kb-item-content">
+                            <div class="kb-item-title">API Documentation</div>
+                            <div class="kb-item-meta">
+                                <span class="meta-category">Development</span>
+                                <span class="meta-dot">•</span>
+                                <span class="meta-time">Updated 1 day ago</span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="kb-item" data-id="6" data-category="Operations" data-content="<h3>Backup and Recovery Procedures</h3><p>Critical procedures for system backup and disaster recovery.</p><h3>Backup Schedule</h3><ul><li>Daily: Incremental backups at 2:00 AM EST</li><li>Weekly: Full backups on Sundays at 3:00 AM EST</li><li>Monthly: Archive backups on the 1st of each month</li></ul><h3>Recovery Time Objectives</h3><ul><li>Critical Systems: RTO < 1 hour</li><li>Production Systems: RTO < 4 hours</li><li>Non-critical Systems: RTO < 24 hours</li></ul><h3>Testing</h3><p>Backup restoration tests are performed:</p><ul><li>Monthly for critical systems</li><li>Quarterly for all systems</li><li>Annually for full disaster recovery simulation</li></ul>">
+                        <div class="kb-item-icon">💾</div>
+                        <div class="kb-item-content">
+                            <div class="kb-item-title">Backup & Recovery</div>
+                            <div class="kb-item-meta">
+                                <span class="meta-category">Operations</span>
+                                <span class="meta-dot">•</span>
+                                <span class="meta-time">Updated 3 days ago</span>
+                            </div>
+                        </div>
+                        <div class="kb-item-badge important">Critical</div>
+                    </li>
+                                                <li class="kb-item active" data-id="1" data-category="Operations" data-content="<h3>Overview</h3><p>This guide covers the essential steps for running scripts in our production environment.</p><h3>Prerequisites</h3><ul><li>Valid credentials</li><li>VPN access</li><li>Script permissions</li></ul><h3>Steps</h3><ol><li>Connect to VPN</li><li>Navigate to scripts directory</li><li>Run: <code>./script_name.sh</code></li><li>Monitor logs for output</li></ol><h3>Best Practices</h3><ul><li>Always test scripts in staging environment first</li><li>Keep backups before running destructive operations</li><li>Document all script executions in the runbook</li><li>Monitor system resources during execution</li></ul><h3>Troubleshooting</h3><p>Common issues and their solutions:</p><ul><li><strong>Permission denied:</strong> Check file permissions with <code>ls -la</code></li><li><strong>Command not found:</strong> Ensure script path is correct</li><li><strong>Timeout errors:</strong> Increase timeout values in configuration</li></ul>">
+                        <div class="kb-item-icon">📜</div>
+                        <div class="kb-item-content">
+                            <div class="kb-item-title">How to Run Scripts</div>
+                            <div class="kb-item-meta">
+                                <span class="meta-category">Operations</span>
+                                <span class="meta-dot">•</span>
+                                <span class="meta-time">Updated 2 days ago</span>
+                            </div>
+                        </div>
+                        <div class="kb-item-badge new">New</div>
+                    </li>
+
+                    <li class="kb-item" data-id="2" data-category="Team" data-content="<h3>Current Rotation</h3><p>Our on-call schedule operates on a weekly rotation basis.</p><h3>Schedule</h3><table><tr><th>Week</th><th>Primary</th><th>Secondary</th></tr><tr><td>Jan 13-19</td><td>John Doe</td><td>Jane Smith</td></tr><tr><td>Jan 20-26</td><td>Mike Johnson</td><td>Sarah Williams</td></tr></table><h3>Emergency Contacts</h3><ul><li>Escalation: +1-555-0100</li><li>Management: +1-555-0200</li></ul><h3>On-Call Responsibilities</h3><ol><li>Monitor alerts and respond within 15 minutes</li><li>Escalate critical issues to management</li><li>Document all incidents in the incident log</li><li>Participate in post-mortem reviews</li></ol><h3>Handoff Process</h3><p>Every Monday at 9:00 AM EST:</p><ul><li>Review open incidents with incoming on-call</li><li>Transfer any ongoing issues</li><li>Update on-call calendar</li><li>Send handoff email to team</li></ul>">
+                        <div class="kb-item-icon">📞</div>
+                        <div class="kb-item-content">
+                            <div class="kb-item-title">On-Call Rotation</div>
+                            <div class="kb-item-meta">
+                                <span class="meta-category">Team</span>
+                                <span class="meta-dot">•</span>
+                                <span class="meta-time">Updated 1 week ago</span>
+                            </div>
+                        </div>
+                    </li>
+
+                        <div class="kb-item-content">
+                            <div class="kb-item-title">SSL Certificate Guide</div>
+                            <div class="kb-item-meta">
+                                <span class="meta-category">Security</span>
+                                <span class="meta-dot">•</span>
+                                <span class="meta-time">Updated 5 days ago</span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="kb-item" data-id="5" data-category="Development" data-content="<h3>API Documentation</h3><p>Comprehensive guide to our internal APIs and integration points.</p><h3>Available Endpoints</h3><ul><li><code>GET /api/v1/status</code> - System status</li><li><code>POST /api/v1/data</code> - Submit data</li><li><code>GET /api/v1/reports</code> - Retrieve reports</li></ul><h3>Authentication</h3><p>All API requests require Bearer token authentication.</p><pre>Authorization: Bearer YOUR_TOKEN_HERE</pre><h3>Rate Limiting</h3><p>API endpoints are rate limited to:</p><ul><li>Standard tier: 100 requests/minute</li><li>Premium tier: 1000 requests/minute</li></ul><h3>Error Codes</h3><table><tr><th>Code</th><th>Description</th></tr><tr><td>400</td><td>Bad Request</td></tr><tr><td>401</td><td>Unauthorized</td></tr><tr><td>403</td><td>Forbidden</td></tr><tr><td>404</td><td>Not Found</td></tr><tr><td>429</td><td>Too Many Requests</td></tr><tr><td>500</td><td>Internal Server Error</td></tr></table>">
+                        <div class="kb-item-icon">🔌</div>
+                        <div class="kb-item-content">
+                            <div class="kb-item-title">API Documentation</div>
+                            <div class="kb-item-meta">
+                                <span class="meta-category">Development</span>
+                                <span class="meta-dot">•</span>
+                                <span class="meta-time">Updated 1 day ago</span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="kb-item" data-id="6" data-category="Operations" data-content="<h3>Backup and Recovery Procedures</h3><p>Critical procedures for system backup and disaster recovery.</p><h3>Backup Schedule</h3><ul><li>Daily: Incremental backups at 2:00 AM EST</li><li>Weekly: Full backups on Sundays at 3:00 AM EST</li><li>Monthly: Archive backups on the 1st of each month</li></ul><h3>Recovery Time Objectives</h3><ul><li>Critical Systems: RTO < 1 hour</li><li>Production Systems: RTO < 4 hours</li><li>Non-critical Systems: RTO < 24 hours</li></ul><h3>Testing</h3><p>Backup restoration tests are performed:</p><ul><li>Monthly for critical systems</li><li>Quarterly for all systems</li><li>Annually for full disaster recovery simulation</li></ul>">
+                        <div class="kb-item-icon">💾</div>
+                        <div class="kb-item-content">
+                            <div class="kb-item-title">Backup & Recovery</div>
+                            <div class="kb-item-meta">
+                                <span class="meta-category">Operations</span>
+                                <span class="meta-dot">•</span>
+                                <span class="meta-time">Updated 3 days ago</span>
+                            </div>
+                        </div>
+                        <div class="kb-item-badge important">Critical</div>
+                    </li>
+                </ul>
+                <!--=====================================-->
+            </div>
+            <!--=====================================-->
+            <!--=====================================-->
+
+            <div class="KBwrapper kb-article">
+                <header>
+                    <h2 class="KBtitle">How to Run Scripts</h2>
+                    <span class="KBarticleStats">📅 Last Updated: 222 days ago</span>
+                    <span class="KBarticleStats">👤Author: System Admin</span>
+                    <span class="KBarticleStats">👁️Views: 123456789</span>
+                </header>
+                <main>
                         <!-- Content will be loaded here dynamically -->
                         <h3>Overview</h3>
                         <p>This guide covers the essential steps for running scripts in our production environment.</p>
@@ -236,53 +347,69 @@
                         <li>VPN access</li>
                         <li>Script permissions</li>
                         </ul>
-                        <h3>Steps</h3>
-                        <ol>
-                        <li>Connect to VPN</li>
-                        <li>Navigate to scripts directory</li>
-                        <li>Run: <code>./script_name.sh</code></li>
-                        <li>Monitor logs for output</li>
-                        </ol>
-                        <h3>Best Practices</h3>
-                        <ul>
-                        <li>Always test scripts in staging environment first</li>
-                        <li>Keep backups before running destructive operations</li>
-                        <li>Document all script executions in the runbook</li>
-                        <li>Monitor system resources during execution</li>
-                                                <h3>Best Practices</h3>
-                        <ul>
-                        <li>Always test scripts in staging environment first</li>
-                        <li>Keep backups before running destructive operations</li>
-                        <li>Document all script executions in the runbook</li>
-                        <li>Monitor system resources during execution</li>
-                                                <h3>Best Practices</h3>
-                                                                        <li>Always test scripts in staging environment first</li>
-                        <li>Keep backups before running destructive operations</li>
-                        <li>Document all script executions in the runbook</li>
-                        <li>Monitor system resources during execution</li>
-                                                <li>Always test scripts in staging environment first</li>
-                        <li>Keep backups before running destructive operations</li>
-                        <li>Document all script executions in the runbook</li>
-                        <li>Monitor system resources during execution</li>
-                                                <h3>Best Practices</h3>
-                                                <h3>Best Practices</h3>
-                        <ul>
-                        <li>Always test scripts in staging environment first</li>
-                        <li>Keep backups before running destructive operations</li>
-                        <li>Document all script executions in the runbook</li>
-                        <li>Monitor system resources during execution</li>
                         </ul>
-                        <h3>Troubleshooting</h3>
-                        <p>Common issues and their solutions:</p>
+                                                <!-- Content will be loaded here dynamically -->
+                        <h3>Overview</h3>
+                        <p>This guide covers the essential steps for running scripts in our production environment.</p>
+                        <h3>Prerequisites</h3>
                         <ul>
-                        <li><strong>Permission denied:</strong> Check file permissions with <code>ls -la</code></li>
-                        <li><strong>Command not found:</strong> Ensure script path is correct</li>
-                        <li><strong>Timeout errors:</strong> Increase timeout values in configuration</li>
+                        <li>Valid credentials</li>
+                        <li>VPN access</li>
+                        <li>Script permissions</li>
                         </ul>
-                        </div>
+                        </ul>
+                                                <!-- Content will be loaded here dynamically -->
+                        <h3>Overview</h3>
+                        <p>This guide covers the essential steps for running scripts in our production environment.</p>
+                        <h3>Prerequisites</h3>
+                        <ul>
+                        <li>Valid credentials</li>
+                        <li>VPN access</li>
+                        <li>Script permissions</li>
+                        </ul>
+                        </ul>
+                                                <!-- Content will be loaded here dynamically -->
+                        <h3>Overview</h3>
+                        <p>This guide covers the essential steps for running scripts in our production environment.</p>
+                        <h3>Prerequisites</h3>
+                        <ul>
+                        <li>Valid credentials</li>
+                        <li>VPN access</li>
+                        <li>Script permissions</li>
+                        </ul>
+                        </ul>
+                                                <!-- Content will be loaded here dynamically -->
+                        <h3>Overview</h3>
+                        <p>This guide covers the essential steps for running scripts in our production environment.</p>
+                        <h3>Prerequisites</h3>
+                        <ul>
+                        <li>Valid credentials</li>
+                        <li>VPN access</li>
+                        <li>Script permissions</li>
+                        </ul>
+                        </ul>
+                                                <!-- Content will be loaded here dynamically -->
+                        <h3>Overview</h3>
+                        <p>This guide covers the essential steps for running scripts in our production environment.</p>
+                        <h3>Prerequisites</h3>
+                        <ul>
+                        <li>Valid credentials</li>
+                        <li>VPN access</li>
+                        <li>Script permissions</li>
+                        </ul>
+                        </ul>
+                                                <!-- Content will be loaded here dynamically -->
+                        <h3>Overview</h3>
+                        <p>This guide covers the essential steps for running scripts in our production environment.</p>
+                        <h3>Prerequisites</h3>
+                        <ul>
+                        <li>Valid credentials</li>
+                        <li>VPN access</li>
+                        <li>Script permissions</li>
+                        </ul>
+                        </ul>
                     </main>
-                </div>
-            </main>
+            </div>
         </section>
 
 <!--END OF CONTENT DIV -->
